@@ -2,7 +2,7 @@ class Event < ApplicationRecord
 
   has_many :attendances
   has_many :users, through: :attendances
-  belong_to :user
+  belongs_to :user
 
   validates :start_date, presence: true
   validates :duration, presence:true, numericality: { greater_than_or_equal_to : 1}, #ajout multiple de 5
